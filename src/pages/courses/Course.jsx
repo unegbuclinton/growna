@@ -36,7 +36,7 @@ function Course() {
 
                     <div className="course__content">
                         <div className="course__chart">
-                            <Chat />
+                            {/* <Chat /> */}
                         </div>
 
                         <div className="course__leadboard">
