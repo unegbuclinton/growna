@@ -1,0 +1,234 @@
+.login__wrapper{
+    background: rgb(10, 10, 46);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.login__box{
+    width: 760px;
+    height: 450px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+    -webkit-box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+    -moz-box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+   
+}
+
+.login__box__left{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 20px;
+
+}
+
+.login__writeup{
+    position: relative;
+}
+
+.login__header{
+    font-size: 24px;
+    font-weight: 900;
+    color:rgb(10, 10, 46);
+    text-align: center;
+
+}
+.login__header__img{
+    height: 100px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__description{
+    font-size: 24px;
+    margin: 10px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(10, 10, 46);;
+}
+.login__input{
+    width: 90%;
+    height: 30px;
+    margin: 10px 5px;
+    /* border-radius: 20px; */
+    border: none;
+    border-bottom: 2px solid grey;
+    padding: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.input__space{
+    position: relative;
+}
+.input__icon{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+}
+
+.login__membership{
+    margin: 10px 10px;
+}
+
+.login__member{
+    font-size: 10px;
+
+}
+
+.login__member > a{
+    text-decoration: none;
+    color: #06102C ;
+}
+
+.login__member > a:hover{
+    text-decoration: underline;
+    font-weight: 500;
+    transform: scale(5);
+}
+
+.login__btn{
+    width: 100%;
+    height: 45px;
+    background: #06102C ;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.login__btn:hover{
+    color:#06102C ;
+    background: #fff;
+    border: 1px solid #06102C ;
+}
+/* Login right styles */
+
+.login__box__right{
+    background: #06102C ;
+    width: 50%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+.login__box__right__img{
+    width: 200px;
+}
+.img__img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.login__img{
+    height: 100%;
+
+}
+
+.login__box__right::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #06102C ;
+    opacity: .9;
+}
+
+.login__right__text{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px;
+    width: 90%;
+    top: 20%;
+    z-index: 999
+}
+
+.login__box__right:hover{
+    transform: scale(.92);
+    transition: .4s ease;
+}
+
+
+
+@media screen and (max-width: 750px){
+    .login__box{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .login__box{
+        flex-direction: column-reverse;
+    }
+    .login__header__img{
+        margin-top: 100px;
+        margin-bottom:-50px ;
+    
+    }
+    .login__box__left{
+        width: 100%;
+        height: 70%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius:0;
+
+    }
+
+    .login__box__right{
+        width: 100%;
+        height: 50%;
+    }
+
+    .login__box{
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        margin-top: 20px;
+           
+    }
+    .login__wrapper{
+        overflow-y: scroll;
+        padding: 50px;
+    }
+ 
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+}

@@ -1,0 +1,81 @@
+
+.user{
+    padding: 30px;
+}
+.user__wrapper{
+    display: flex;
+    align-items: center;
+
+}
+.user__sidebar{
+    padding: 0 40px;
+    margin-top: 50px;
+    align-self: flex-end;
+}
+
+.user__main{
+    height: 480px;
+    background:  #06102C;
+    width: 1000px;
+    border-radius: 20px;
+    box-shadow: 4px 6px 9px 4px rgba(10,10,46,0.75);
+    -webkit-box-shadow: 4px 6px 9px 4px rgba(10,10,46,0.75);
+    -moz-box-shadow: 4px 6px 9px 4px rgba(10,10,46,0.75);
+}
+
+.user__cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px;
+}
+
+
+#user{
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+}
+
+#user th{
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #fff;
+
+}
+.helo{
+    width: 30px;
+}
+.user__filter{
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+#user td{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+.user__img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user__user{
+    display: flex;
+    justify-content: space-between;
+}
+.user__details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.user__details > p{
+    font-size: 9px;
+    font-weight: 300;
+    margin-top: 5px;
+}

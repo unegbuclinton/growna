@@ -1,0 +1,230 @@
+.signup__wrapper{
+    background: rgb(10, 10, 46);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.signup__box{
+    width: 760px;
+    height: 450px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+    -webkit-box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+    -moz-box-shadow: -3px 0px 20px 0px rgba(7,7,8,0.75);
+}
+
+.signup__box__left{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 20px;
+
+}
+
+.signup__writeup{
+    position: relative;
+}
+
+.signup__header{
+    font-size: 24px;
+    font-weight: 900;
+    color:rgb(10, 10, 46);
+    text-align: center;
+
+}
+.signup__header__img{
+    height: 100px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.signup__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup__description{
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(10, 10, 46);;
+}
+.signup__input{
+    width: 90%;
+    height: 30px;
+    margin: 10px 5px;
+    /* border-radius: 20px; */
+    border: none;
+    border-bottom: 2px solid grey;
+    padding: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.input__space{
+    position: relative;
+    cursor: R;
+}
+
+.signup__membership{
+    margin: 10px 10px;
+}
+
+.signup__member{
+    font-size: 10px;
+
+}
+
+.signup__member > a{
+    text-decoration: none;
+    color: rgb(10, 10, 46);
+}
+
+.signup__member > a:hover{
+    text-decoration: underline;
+    font-weight: 500;
+    transform: scale(5);
+}
+
+.signup__btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(10, 10, 46);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.signup__btn:hover{
+    color:rgb(10, 10, 46);
+    background: #fff;
+    border: 1px solid rgb(10, 10, 46);
+}
+
+/* Login right styles */
+
+.signup__box__right{
+    background: rgb(37, 37, 129);
+    width: 50%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+.img__img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.signup__img{
+    height: 100%;
+
+}
+
+.signup__box__right::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(10, 10, 46);
+    opacity: .9;
+}
+
+.signup__right__text{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px;
+    width: 90%;
+    top: 20%;
+    z-index: 999
+}
+
+.signup__box__right:hover{
+    transform: scale(.92);
+    transition: .4s ease;
+}
+
+
+
+@media screen and (max-width: 750px){
+    .signup__box{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .signup__box{
+        flex-direction: column-reverse;
+    }
+    .signup__box__left{
+        width: 100%;
+        height: 70%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius:0;
+
+    }
+
+    .signup__box__right{
+        width: 100%;
+        height: 50%;
+    
+
+    }
+    .signup__img{
+        margin-bottom: -100px;
+    }
+    .signup__header__img{
+        height: 100px;
+        margin-top: 130px;
+        margin-bottom:-150px ;
+    }
+
+    .signup__box{
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        margin-top: 115px;
+      
+     
+    }
+    .signup__wrapper{
+        overflow-y: scroll;
+        padding: 30px;;
+    }
+ 
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+}

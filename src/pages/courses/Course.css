@@ -1,0 +1,9 @@
+.course__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course__cards{
+    display: flex;
+}
