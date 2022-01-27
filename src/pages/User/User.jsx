@@ -2,7 +2,6 @@ import './User.css'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import Sidebar from '../../components/sidebar/Sidebar'
-import urch from '../../assets/urch.jpg'
 import Card from '../../components/card/Card'
 import Navbar from '../../components/nav/Navbar'
 import Table from '../../components/table/Table'
@@ -19,6 +18,7 @@ function User() {
        axios.get(url)
        .then(res=>{
            console.log(res.data)
+           setData(res.data)
        })
         
     },[url])
@@ -117,6 +117,7 @@ function User() {
                             </tr>
 
                         </table > */}
+                        {data}
                         <Table />
 
 
