@@ -35,27 +35,33 @@ function Login() {
 
 
 
-    const url = 'http://35.231.148.225:8080/v1/company/login'
+    // const url = 'http://35.231.148.225:8080/v1/company/login'
+
 
     const navigate = useNavigate();
 
-    const postReq = () => {
-        axios.post(url, {
-            email,
-            password
-        }).then(res => {
-            console.log(res.data)
-            localStorage.setItem('user-token', res.data)
-            navigate('/user')
+    // const postReq = () => { 
+    //     axios.post(url, {
+    //         email,
+    //         password
+    //     }).then(res => {
+    //         console.log(res.data)
+    //         localStorage.setItem('user-token', res.data)
+    //         navigate('/user')
 
 
-        }).then(err => {
+    //     }).then(err => {
 
-            console.log(err)
+    //         console.log(err)
 
-        })
+    //     })
 
 
+    // }
+
+    const loginBtn = ()=>{
+        console.log(email , password)
+        navigate('/user')
     }
 
     return (
@@ -92,7 +98,7 @@ function Login() {
 
                         </div>
 
-                        <button className='login__btn' onClick={postReq}>Login</button>
+                        <button className='login__btn' onClick={loginBtn}>Login</button>
 
                         <div className="login__membership">
                             <p className='login__member'><Link to="/signup">Not a Member ?</Link></p>

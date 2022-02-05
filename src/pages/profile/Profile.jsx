@@ -1,18 +1,35 @@
 import './Profile.css'
+import { useState } from 'react'
 import Navbar from '../../components/nav/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import urch from '../../assets/urch.jpg'
+import SidebarMobile from '../../components/sidebar/SidebarMobile'
+import {AiOutlineBars} from 'react-icons/ai'
 
 function Profile() {
+
+    const [click, setClick] = useState(false)
+
+
     return (
         <div className='profile'>
+
+            <div className={click ? "profile__sidebarMobile__active" : "profile__sidebarMobile"}>
+                <SidebarMobile />
+            </div>
+            
             <div className="profile__wrapper">
                 <div className="profile__navbar">
-                    <Navbar name='Profile'/>
+                    <Navbar name='Profile' />
                 </div>
 
+
+
                 <div className="profile__body">
-                    
+
+                    <div className={!click ? "profile__hamburger" : "profile__hamburger__color"} onClick={() => { setClick(!click) }}>
+                        <AiOutlineBars />
+                    </div>
                     <div className="profile__sidebar">
                         <Sidebar />
                     </div>
@@ -26,8 +43,8 @@ function Profile() {
                                 Contact Details
                             </p>
                             <div className="contact__name">
-                                Name : Unegbu Urch
-                                Contact Number : +234 90309053
+                                <p> Name : Unegbu Urch</p>
+                                <p> Contact Number : +234 90309053</p>
                             </div>
 
                         </div>

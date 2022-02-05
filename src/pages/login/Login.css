@@ -184,14 +184,14 @@ input:focus{
     }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 320px){
 
     .login__box{
         flex-direction: column-reverse;
     }
     .login__header__img{
-        margin-top: 100px;
-        margin-bottom:-16px ;
+        margin-top: 90px;
+        margin-bottom:30px ;
     
     }
     .login__box__left{
@@ -212,11 +212,12 @@ input:focus{
         justify-content: center;
         align-items: center;
         height: 600px;
-        margin-top: 20px;
+        width: 300px;
            
     }
     .login__wrapper{
         overflow-y: scroll;
+        overflow-x: hidden;
         padding: 50px;
     }
  

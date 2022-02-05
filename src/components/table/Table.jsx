@@ -156,6 +156,7 @@ function Table() {
     return (
         <>
             <DataTable
+            className='data__table'
                 columns={columns}
                 data={data}
                 customStyles={customStyles}

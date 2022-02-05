@@ -1,6 +1,7 @@
 import './SignUp.css'
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router'
 import industry from '../../assets/industry.jpg'
 import grownabg from '../../assets/grownabg.png'
 import { FaUserAlt } from 'react-icons/fa'
@@ -26,28 +27,33 @@ function SignUp() {
 
     const [address, setAddress] = useState('')
 
-
-    const url = 'http://35.231.148.225:8080/v1/company/register'
-
-    const postData = () => {
-        axios.post(url, {
-            email,
-            password,
-            phone,
-            address
-        }).then(res => {
-            console.log(res.data)
-            localStorage.setItem('user-token', res.data)
+    const navigate = useNavigate();
 
 
+    // const url = 'http://35.231.148.225:8080/v1/company/register'
 
-        }).then(err => {
+    // const postData = () => {
+    //     axios.post(url, {
+    //         email,
+    //         password,
+    //         phone,
+    //         address
+    //     }).then(res => {
+    //         console.log(res.data)
+    //         localStorage.setItem('user-token', res.data)
 
-            console.log(err)
 
-        })
+    //     }).then(err => {
+
+    //         console.log(err)
+
+    //     })
 
 
+    // }
+
+    const signUp =()=>{ 
+        navigate('/user')
     }
 
     return (
@@ -88,7 +94,7 @@ function SignUp() {
 
                     </div>
 
-                    <button className='signup__btn' onClick={postData}>SignUp</button>
+                    <button className='signup__btn' onClick={signUp}>SignUp</button>
 
                     <div className="signup__membership">
                         <p className='signup__member'><Link to="/">Already a Member ?</Link></p>

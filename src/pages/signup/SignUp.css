@@ -175,7 +175,7 @@ input:focus{
     }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 320px){
     .signup__box{
         flex-direction: column-reverse;
     }
@@ -198,8 +198,8 @@ input:focus{
     }
     .signup__header__img{
         height: 100px;
-        margin-top: 130px;
-        margin-bottom:-80px ;
+        margin-top: 86px;
+        margin-bottom:40px ;
     }
 
     .signup__box{
@@ -207,17 +207,23 @@ input:focus{
         justify-content: center;
         align-items: center;
         height: 600px;
-        margin-top: 115px;
+        width: 300px;
+     
       
      
     }
     .signup__wrapper{
         overflow-y: scroll;
+        overflow-x: hidden;
         padding: 30px;;
+    }
+
+    .signup__btn{
+        height: 90px;
     }
  
     ::-webkit-scrollbar {
-        width: 5px;
+        width: 1px;
       }
 
       ::-webkit-scrollbar-track {

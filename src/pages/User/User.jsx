@@ -1,34 +1,43 @@
 import './User.css'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Card from '../../components/card/Card'
 import Navbar from '../../components/nav/Navbar'
 import Table from '../../components/table/Table'
+import { AiOutlineBars } from 'react-icons/ai'
+import SidebarMobile from '../../components/sidebar/SidebarMobile'
 
 function User() {
 
-    const [data,setData]= useState ('')
+    const [data, setData] = useState('')
+
+    const [click, setClick] = useState(false)
 
 
     const url = 'https://jsonplaceholder.typicode.com/posts'
 
 
-    useEffect(()=>{
-       axios.get(url)
-       .then(res=>{
-           console.log(res.data)
-           setData(res.data)
-       })
-        
-    },[url])
+    useEffect(() => {
+        axios.get(url)
+            .then(res => {
+                console.log(res.data)
+                setData(res.data)
+            })
+
+    }, [url])
 
 
     return (
         <div className='user'>
 
+
+            <div className={click ? "user__sidebarMobile__active" : "user__sidebarMobile"}>
+                <SidebarMobile />
+            </div>
+
             <div className="user__navbar">
-                <Navbar name=' User'/>
+                <Navbar name=' User' />
             </div>
 
             <div className="user__wrapper">
@@ -37,6 +46,12 @@ function User() {
                 </div>
 
                 <div className="user__main__content">
+
+
+                    <div className={!click ? "user__hamburger" : "user__hamburger__color"} onClick={() => { setClick(!click) }}>
+                        <AiOutlineBars />
+                    </div>
+
 
                     <div className="user__cards">
                         <div className="user__card">
@@ -117,7 +132,6 @@ function User() {
                             </tr>
 
                         </table > */}
-                        {data}
                         <Table />
 
 
