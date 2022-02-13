@@ -5,6 +5,7 @@ function Chat() {
     return (
         <div>
 
+           
             <Bar
 
                 data={{

@@ -30,31 +30,28 @@ function SignUp() {
     const navigate = useNavigate();
 
 
-    // const url = 'http://35.231.148.225:8080/v1/company/register'
+    const url = 'https://jsonplaceholder.typicode.com/posts'
 
-    // const postData = () => {
-    //     axios.post(url, {
-    //         email,
-    //         password,
-    //         phone,
-    //         address
-    //     }).then(res => {
-    //         console.log(res.data)
-    //         localStorage.setItem('user-token', res.data)
+    const postData = () => {
+        axios.post(url, {
+            title: email,
+            body: password,
+            userId: phone,
+            id: address
+        }).then(res => {
+            console.log(res.data)
+            // localStorage.setItem('user-token', res.data)
+            navigate('/user')
+
+        }).then(err => {
+
+            console.log(err)
+
+        })
 
 
-    //     }).then(err => {
-
-    //         console.log(err)
-
-    //     })
-
-
-    // }
-
-    const signUp =()=>{ 
-        navigate('/user')
     }
+
 
     return (
         <div className='signup__wrapper'>
@@ -94,7 +91,7 @@ function SignUp() {
 
                     </div>
 
-                    <button className='signup__btn' onClick={signUp}>SignUp</button>
+                    <button className='signup__btn' onClick={postData}>SignUp</button>
 
                     <div className="signup__membership">
                         <p className='signup__member'><Link to="/">Already a Member ?</Link></p>
