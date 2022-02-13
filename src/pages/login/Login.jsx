@@ -1,7 +1,7 @@
 import './Login.css'
 import grownabg from '../../assets/grownabg.png'
 import { useNavigate } from 'react-router'
-import axios from 'axios'
+// import axios from 'axios'
 import { useState } from 'react'
 import industry from '../../assets/industry.jpg'
 import { FaUserAlt } from 'react-icons/fa'

@@ -1,5 +1,5 @@
 import './User.css'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Card from '../../components/card/Card'
 import Navbar from '../../components/nav/Navbar'
@@ -12,14 +12,6 @@ function User() {
 
 
     const [click, setClick] = useState(false)
-
-
-
-
-
-
-
-
 
     return (
         <div className='user'>
