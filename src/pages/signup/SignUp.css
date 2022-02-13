@@ -175,7 +175,7 @@ input:focus{
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 750px){
+@media screen and (min-width: 750px) {
     .signup__box{
         flex-direction: column-reverse;
     }
