@@ -170,12 +170,12 @@ input:focus{
 
 @media screen and (max-width: 750px){
     .signup__box{
-        width: 70%;
+        width: 80%;
         height: 70%;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (min-width: 320px) and (max-width: 750px){
     .signup__box{
         flex-direction: column-reverse;
     }

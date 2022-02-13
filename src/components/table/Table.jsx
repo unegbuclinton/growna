@@ -1,6 +1,25 @@
 import DataTable from 'react-data-table-component'
+import axios from 'axios'
+import { useState,useEffect } from 'react'
+
+
 
 function Table() {
+
+
+    const [datas, setDatas] = useState([])
+
+    const url = 'https://jsonplaceholder.typicode.com/users'
+
+    useEffect(() => {
+        axios.get(url,{params: {_limit:9}})
+            .then(res => {              
+                setDatas(res.data)    
+            })
+
+    }, [url])
+
+
 
     const customStyles ={
         rows :{
@@ -32,28 +51,28 @@ function Table() {
             filterable: true,
         },
         {
-            name: 'Average time',
-            selector: row => row.averageTime,
+            name: 'Username',
+            selector: row => row.userName,
             sortable: true,
             filterable: true,
         },
         {
-            name: 'Completed course',
-            selector: row => row.completedCourse,
-            sortable: true,
-            filterable: true,
-
-        },
-        {
-            name: 'Enrolled course',
-            selector: row => row.enrolledCourse,
+            name: 'Email',
+            selector: row => row.email,
             sortable: true,
             filterable: true,
 
         },
         {
-            name: 'Reward',
-            selector: row => row.reward,
+            name: 'City',
+            selector: row => row.city,
+            sortable: true,
+            filterable: true,
+
+        },
+        {
+            name: 'Website',
+            selector: row => row.website,
             sortable: true,
             filterable: true,
         },
@@ -66,91 +85,20 @@ function Table() {
         }
     ]
 
-    const data = [
-        {
-            id: 1,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 2,
-            title: 'Mezie king',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 3,
-            title: 'Yash Patel',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 4,
-            title: 'Christ mercy',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 5,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 6,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 7,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 8,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-        {
-            id: 9,
-            title: 'Unegbu Urch',
-            averageTime: '15 minutes',
-            completedCourse: 7,
-            enrolledCourse: 10,
-            reward: 200,
-            userId: 555
-        },
-      
-    ]
-
+    const data= datas.map(d =>({
+   
+                id: d.id,
+                title: d.name,
+               userName: d.username,
+                email: d.email,
+                city: d.address.city,
+                website: d.website,
+                userId: 555
+    
+    })
+    
+    )
+  
 
 
     return (

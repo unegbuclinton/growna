@@ -11,9 +11,9 @@ function Course() {
 
     const [click, setClick] = useState(false)
 
-
+    
     return (
-        <div className='course'>
+        <div className='course' >
 
             <div className={click ? "user__sidebarMobile__active" : "user__sidebarMobile"}>
                 <SidebarMobile />
@@ -22,7 +22,6 @@ function Course() {
             <div className="course__navbar">
                 <Navbar name='Courses' />
             </div>
-
 
             <div className="course__wrapper">
 
@@ -51,12 +50,12 @@ function Course() {
                     </div>
 
                     <div className="course__content">
-                        <div className="course__table">
+                        <div className="course__table" >
                             <TableCourse />
                         </div>
 
-                        <div className="course__leadboard">
-                            <div className="leadboard">
+                        <div className="course__leadboard" >
+                            <div className="leadboard" >
                                 <h1> Leaderboard</h1>
                                 <h2> Completed Rate</h2>
                                 <div className="course__list">
@@ -74,6 +73,7 @@ function Course() {
                                     <p>70%</p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

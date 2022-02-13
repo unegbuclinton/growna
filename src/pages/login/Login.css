@@ -177,14 +177,14 @@ input:focus{
 
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
     .login__box{
-        width: 70%;
+        width: 80%;
         height: 70%;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) and (max-width: 750px){
 
     .login__box{
         flex-direction: column-reverse;

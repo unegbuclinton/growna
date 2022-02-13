@@ -74,6 +74,8 @@
     border-bottom: 1px solid #89AAE6;
 }
 
+
+
 @media only screen and (max-width: 320px){
 
     .course{
@@ -121,8 +123,8 @@
         color: #fff;
         align-items: center;
         padding: 5px;
-        left: -14px;
-        top: 0;
+        left: -5px;
+        top: 60px;
         z-index: 5;
    }
     .course__hamburger__color{
@@ -135,8 +137,8 @@
         color: 06102C;
         align-items: center;
         padding: 5px;
-        left: -15px;
-        top: 0;
+        left: -5px;
+        top: 60px;
         z-index: 5;
    }
    

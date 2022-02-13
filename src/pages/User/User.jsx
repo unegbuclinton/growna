@@ -1,6 +1,5 @@
 import './User.css'
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Card from '../../components/card/Card'
 import Navbar from '../../components/nav/Navbar'
@@ -10,22 +9,16 @@ import SidebarMobile from '../../components/sidebar/SidebarMobile'
 
 function User() {
 
-    const [data, setData] = useState('')
+
 
     const [click, setClick] = useState(false)
 
 
-    const url = 'https://jsonplaceholder.typicode.com/posts'
 
 
-    useEffect(() => {
-        axios.get(url)
-            .then(res => {
-                console.log(res.data)
-                setData(res.data)
-            })
 
-    }, [url])
+
+
 
 
     return (
@@ -51,7 +44,6 @@ function User() {
                     <div className={!click ? "user__hamburger" : "user__hamburger__color"} onClick={() => { setClick(!click) }}>
                         <AiOutlineBars />
                     </div>
-
 
                     <div className="user__cards">
                         <div className="user__card">

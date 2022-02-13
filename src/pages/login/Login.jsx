@@ -35,17 +35,25 @@ function Login() {
 
 
 
-    // const url = 'http://35.231.148.225:8080/v1/company/login'
+    //  const url = 'http://35.231.148.225:8080/v1/company/login'
 
 
-    const navigate = useNavigate();
+     const navigate = useNavigate();
 
-    // const postReq = () => { 
+    // const config = {
+    //     headers: {
+    //        'Content-Type': 'application/json',
+    //        'Authorization' : 'token'
+    //     }
+    // }
+
+    //  const postReq = () => { 
+       
     //     axios.post(url, {
     //         email,
     //         password
-    //     }).then(res => {
-    //         console.log(res.data)
+    //     },config).then(res => {
+    //         console.log(res)
     //         localStorage.setItem('user-token', res.data)
     //         navigate('/user')
 
@@ -64,7 +72,7 @@ function Login() {
         navigate('/user')
     }
 
-    return (
+    return(
 
         <div>
 

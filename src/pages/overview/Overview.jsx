@@ -1,11 +1,23 @@
 import './Overview.css';
 import Sidebar from '../../components/sidebar/Sidebar'
+import { useState } from 'react'
 import Navbar from '../../components/nav/Navbar';
 import Chat from '../../components/ccart/Chat'
 import Card from '../../components/card/Card';
+import { AiOutlineBars } from 'react-icons/ai'
+import SidebarMobile from '../../components/sidebar/SidebarMobile'
 
 function Overview() {
+
+    const [click, setClick] = useState(false)
+
+
     return <div className='overview'>
+
+        <div className={click ? "overview__sidebarMobile__active" : "overview__sidebarMobile"}>
+            <SidebarMobile />
+        </div>
+
         <div className="overview__navbar">
             <Navbar name='Overview' />
         </div>
@@ -16,6 +28,11 @@ function Overview() {
             </div>
 
             <div className="overview__main__content">
+
+                <div className={!click ? "overview__hamburger" : "overview__hamburger__color"} onClick={() => { setClick(!click) }}>
+                    <AiOutlineBars />
+                </div>
+
                 <div className="overview__cards">
                     <div className="overview__card">
                         <Card description='Courses' figure='7' />
@@ -31,11 +48,11 @@ function Overview() {
                 </div>
 
                 <div className="overview__content">
-                    <div className="content__chart">
+                    <div className="overview__chart">
                         <Chat />
                     </div>
 
-                    <div className="content__leadboard">
+                    <div className="overview__leadboard">
                         <h1> Leaderboard</h1>
                         <div className="leaderboard">
                             <p> Monthly</p>
